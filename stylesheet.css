@@ -1,0 +1,92 @@
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Inter', sans-serif; */
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+body h1 {
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.frame {
+  height: 400px;
+  width: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye {
+  background: url("eye.png") center center / cover no-repeat;
+  image-rendering: pixelated;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: blink 5s linear infinite;
+}
+
+.pupil {
+  background: url("pupil.png") center center / cover no-repeat;
+  image-rendering: pixelated;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+}
+
+.dark {
+  background: url("dark.png") center center / cover no-repeat;
+  image-rendering: pixelated;
+  height: 200px;
+  width: 200px;
+}
+
+@keyframes blink {
+  0% {
+    /* background: url("eye.png") center center / cover no-repeat; */
+    transform: rotateX(0);
+  }
+  40% {
+    transform: rotateX(0deg);
+  }
+  41% {
+    transform: rotateX(90deg);
+  }
+  42% {
+    transform: rotateX(0deg);
+  }
+
+  100% {
+    transform: rotateX(0);
+    /* background: url("eye.gif") center center / cover no-repeat; */
+  }
+}
+
+.textsInfo {
+  padding: 1rem;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+.textsInfo p {
+  text-align: center;
+}
+
+.textsInfo h1 {
+  color: #f0db4f;
+}

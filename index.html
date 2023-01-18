@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax</title>
+
+    <link rel="stylesheet" href="stylesheet.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Eye see you</h1>
+
+    <div class="frame">
+      <div class="eye">
+        <div class="pupil" id="pupil">
+          <div class="dark"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="textsInfo">
+      <p>Eye using Css & js.</p>
+      <a href="https://github.com/JacobSaucelo/parallax">
+        <p>Code: JacobSaucelo/parallax</p>
+      </a>
+      <a href="https://github.com/JacobSaucelo">
+        <p>Github: github.com/JacobSaucelo</p>
+      </a>
+      <h1>1 - 18 - 23</h1>
+    </div>
+
+    <script>
+      document.addEventListener("mousemove", parallax);
+      const eye = document.querySelector("#pupil");
+      const dark = document.querySelector(".dark");
+
+      function parallax(e) {
+        x = e.clientX - window.innerWidth / 2;
+        y = e.clientY - window.innerHeight / 2;
+
+        eye.style.transform = `translateY(${y * 0.04}px) translateX(${
+          x * 0.04
+        }px)`;
+        dark.style.transform = `translateY(${y * 0.03}px) translateX(${
+          x * 0.02
+        }px)`;
+      }
+    </script>
+  </body>
+</html>
